@@ -1,7 +1,11 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `WordPress / WooCommerce / GraphQL`,
+    description: `Gatsby JS with WordPress back-end fetching data with grapgQL`,
     author: `@gatsbyjs`,
   },
   plugins: [
@@ -27,8 +31,16 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        // Arbitrary name for the remote schema Query type
+        typeName: "OOHLALAVA",
+        // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
+        fieldName: "oohlalava",
+        // Url to query from
+        url: process.env.ACCESS_URL,
+      },
+    },
   ],
 }
