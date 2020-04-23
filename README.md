@@ -22,4 +22,7 @@ gatsby - config.js
 
 ##### WordPress set up
 
-Plugins needed
+Plugins used
+
+WP GraphQL
+WooCommerce GraphQL API - by shopz.io
