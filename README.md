@@ -25,4 +25,5 @@ gatsby - config.js
 Plugins used
 
 WP GraphQL
+
 WooCommerce GraphQL API - by shopz.io
