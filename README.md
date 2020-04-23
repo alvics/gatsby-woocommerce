@@ -1,5 +1,7 @@
 # WordPress / WooCommerce & GatsbyJS
 
+### View [demo](https://gatsby-woocommerce-temp.netlify.app/products/)
+
 ## JAM Stack
 
 #### Using WordPress and WooCommerce
